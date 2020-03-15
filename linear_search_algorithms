@@ -1,0 +1,44 @@
+'''
+Creation of linear search algorithms in Python, namely:
+  - linear search
+  - better linear search
+  - sentinel linear search
+  - recursive linear search
+  
+ Note: what are referred to as methods in Python are more generally
+ called procedures in computer science
+ 
+ Eventually I'll get around to writing these algorithms in C++.
+ '''
+ ---LINEAR SEARCH---
+ 
+def linear_search(A, n, x):
+    '''
+    performs a linear search on an array
+    A = an array
+    n = number of elements in A to search through
+    x = the value being searched for
+    '''
+    answer = "NOT-FOUND"
+    for i in range(0, len(A), 1):
+        if A[i] == x:
+            answer = i
+    return answer
+    
+ example:
+        books = ["Where the Red Fern Grows", "The Grapes of Wrath", "A Farewell to Arms", 
+                 "Crime and Punishment", "The Brothers Karamazov"]
+
+        answer = linear_search(books, len(books), "The Brothers Karamazov")
+        print(answer)
+
+The running time for linear search is theta n while also noting that this then also means
+the upper bound is O(n). The lower bound would be omega(1) if you found the book you were
+right when you started searching.
+
+---BETTER LINEAR SEARCH ---
+
+
+
+The reason why this variant of linear search is better is because the loop doesn't keep
+on going through the rest of the array when it finds the answer.
