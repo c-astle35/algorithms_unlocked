@@ -31,3 +31,31 @@ Binary Tree:
     2                     binary search algorithms only run really well when dealing with arrays
       \                   that have been sorted.
         3
+
+
+import math
+
+def binary_search(A, n, x):
+    '''
+    A = an arrray
+    n = number of elements in A
+    x = value being searched for
+    '''
+    p = 0
+    r = n
+
+    while p <= r:
+        q = math.floor((p + r)/2)
+
+        if A[q] == x:
+            return q
+        elif A[q] != x and A[q] > x:
+            r = q - 1
+        elif A[q] != x and A[q] < x:
+            p = q + 1
+            
+    return "NOT-FOUND"
+
+Notice how p and r are reset to reflect going ot the right or left after every iteration depending 
+upon the whether the value of x is greater or less than the current value if the value has not 
+already been found. 
