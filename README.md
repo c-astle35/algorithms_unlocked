@@ -8,8 +8,13 @@ you accidently take a snooze when you're trying too hard to really absorb the ma
 Some other books I've got on my reading to either read completely through review what's in them
 include:
 
+
 Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein
+
 The Quick Python Book by Ceder
+
 Beginning Linux Programming by Matthew and Stones
-The Linux Programmer's Guide by Goldt, van der Meer, Burkett, and Welsh   
+
+The Linux Programmer's Guide by Goldt, van der Meer, Burkett, and Welsh  
+
 Eloquent JavaScript by Haverbeke
