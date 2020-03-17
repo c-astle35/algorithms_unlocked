@@ -9,7 +9,11 @@ Some other books I've got on my reading to either read completely through review
 include:
 
 
+Nine Algorithms That Changed the Future by MacCormick
+
 Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein
+
+The Art of Computer Programming by Knuth
 
 The Quick Python Book by Ceder
 
