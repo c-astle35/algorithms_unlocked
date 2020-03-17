@@ -1,1 +1,33 @@
+---BINARY SEARCH---
+Let's say you have a phone book with all the names sorted in it alphabetically. Conducting a binary
+search, you first find the middle page and you ask yourself: "Is the name I'm looking for go before
+this page or after this, or is the name I'm looking for already on this page?" By doing so, you then
+can either end your search there or cut the number of items you need to look by half. Then depending
+on your answer to the first question, you then either stop because you have found the word or you go
+to one of the respective and then go to the middle page of that section and ask youself the same
+question again. 
 
+Because the number of items you're looking is constantly being in cut in half, we can say that binary 
+search has a running time of O(log n). Note that in computer science lg refers to base log base two.
+
+Think about this way: 
+Let's say we're visually all the possible paths were willing to take by asking ourselves the same 
+question we mentioned earlier without ever finding the value we're looking for. Our first decision 
+will have to be between the left and right path (two options). Extending this idea further, let's say
+that each of those paths will then have two options ad infinitum. If we are to see the options grouped
+by levels, we can then say that each one of those levels is then an action to be made which equates to
+the n we're looking for in computer science.
+
+Binary Tree:
+
+        3                 Notice the levels. When you've reached anyone of the level three
+      /                   decisions, that means you've have to had made three actions though
+    2                     may vary accordingly. 
+  /   \ 
+ /      3                 Thus we can write that the running time for a binary-search algorithm is
+1                         O(lg n). Note that lg uses base two in computer science. So we can write 
+ \      3                 that runtime for this particular instance of a binary search algorithm 
+  \   /                   was O(lg 8) = 3 were n = the number of elements in the array. Also, note
+    2                     binary search algorithms only run really well when dealing with arrays
+      \                   that have been sorted.
+        3
