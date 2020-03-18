@@ -1,0 +1,58 @@
+---SELECTION-SORT---
+def selection_sort(A,n):
+  '''
+  A = an array
+  n = number of elements in A to be sorted
+  '''
+   for i in range(0, len(A)):
+       smallest = i
+       for j in range(i+1, len(A)):
+           if A[j] < A[smallest]:
+               smallest = j
+           temp = A[i]
+           A[i] = A[smallest]
+           A[smallest] = temp
+    
+    return(A)
+
+Note how important the nested loop is for this algorithm. When the first loop is originally ran, the
+first element is compared to all the rest of the elements. If one of the other elements is found to be
+smaller, the smaller element then swaps places with the larger element that was original there. 
+
+The running time for the selection-sort algorithm is O(n^2). The reasoning behind this can be from one
+perspective that the outer loop runs n number of times while the inner loop must then run n-1 number of
+times for each one of ther outer loops iterations. Since we are finding the asymptotic upper bound. 
+we can drop the '-1' from the inner loop and we get O(n*n) or rather O(n^2) for the running time. 
+
+omega(n^2) is also the lower bound running time for selection-sort. 
+
+A way to remember this one is to think of organizing the ties in your closet one at a time. 
+
+---INSERTION SORT---
+def insertion_sort(A,n):
+    '''
+    A = an array
+    n = number of elements in A to be sorted
+    '''
+    for i in range(1,len(A)):
+        key = A[i]
+        j = i - 1
+
+        while j>=0 and A[j] > key:
+            A[j+1] = A[j]
+            j -= 1
+
+        A[j+1] = key
+        
+    return(A)
+    
+ Notice with this one the while loop that is being used. When a value is found to be out of place in
+ terms of the relation set by the conditions of the while loop, the loop will keep moving the value
+ being checked down the list until either a place has been found or the end of the list on its 
+ lefthand-side has been reached. Think of this one like getting in line for picture day.
+ 
+ The running time for selection sort varies by how unordered the list is. The maximal unorderliness
+ of a list is when it is backwards making the worst running time for the insertion-sort algorithm 
+ O(n^2). However, if the list entered is already somewhat ordered, the running time would look more
+ like O(k*n) where 'k' is the number of known spots that need switching. This then means that the best
+ running time for insertion sort is O(n) since the 'k' is trivial when using asymptotic notation.
